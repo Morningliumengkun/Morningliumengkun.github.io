@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     论文页：按年份分组（可先用 <h3> 按研究方向分组再按年份）
+     每条论文 = 徽章（会议/期刊 + 分区等级 + 标签） + 作者 + 标题 + 出处 + 链接
+     作者角标：note-cofirst（共同一作）、note-corresponding（通讯作者）
+     ============================================================ -->
+<html lang="zh-CN" data-title-zh="论文发表 | 张三" data-title-en="Publications | Zhang San">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文发表 | 张三</title>
+    <meta name="description" content="张三的代表性论文发表。Selected publications of Zhang San.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="style.css?v=20260919-1">
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/academicons/academicons@1.9.1/css/academicons.min.css">
+</head>
+
+<body data-page="publications">
+<div id="main-content">
+<div data-site-sidebar></div>
+
+<div data-site-header></div>
+
+<h2><span class="zh">论文发表（部分）</span><span class="en">Publications (Selective)</span></h2>
+
+<div class="publication-notation">
+    <span class="zh">标注：</span><span class="en">Notations:</span><i>
+        <span class="notation-mark note-cofirst" aria-hidden="true"></span>
+        <span class="zh">共同一作；</span><span class="en">Co-first authors; </span>
+        <span class="notation-mark note-corresponding" aria-hidden="true"></span>
+        <span class="zh">通讯作者</span><span class="en">Corresponding authors</span>
+    </i>
+</div>
+
+<!-- ✏️ 如需按研究方向分组，参考原站结构在年份分组外加 <h3>研究方向</h3> 和一段简介 -->
+
+<div class="publication-year">2026:</div>
+<ul class="content-list publication-list">
+    <!-- ✏️ 复制整个 <li> 即可增加一篇论文，按时间倒序排列；链接请替换为真实地址 -->
+    <li>
+        <span class="pub-badges"><span class="venue">CVPR</span><span class="rank">CCF-A</span><span class="tag"><span class="zh">口头报告（前 3%）</span><span class="en">Oral (Top 3%)</span></span></span>
+        Alice Chen<sup class="author-note note-cofirst" aria-label="Co-first author"></sup>,
+        <b>Zhang San</b><sup class="author-note note-cofirst" aria-label="Co-first author"></sup>,
+        Bob Li, Carol Wang<sup class="author-note note-corresponding" aria-label="Corresponding author"></sup>.
+        <i><span class="zh">面向边缘设备的多模态轻量化识别框架</span><span class="en">Sample Paper I: A Multi-Modal Framework for Lightweight Visual Recognition on Edge Devices</span></i>[C]
+        //Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR). 2026.
+        <a href="#">[Paper]</a>
+        <a href="#">[Code]</a>
+    </li>
+</ul>
+
+<div class="publication-year">2025:</div>
+<ul class="content-list publication-list">
+    <li>
+        <span class="pub-badges"><span class="venue">AAAI</span><span class="rank">CCF-A</span></span>
+        <b>Zhang San</b>, David Zhou, Emma Wu<sup class="author-note note-corresponding" aria-label="Corresponding author"></sup>.
+        <i><span class="zh">基于对比学习的跨模态检索方法</span><span class="en">Sample Paper II: Cross-Modal Retrieval via Contrastive Learning</span></i>[C]
+        //Proceedings of the AAAI Conference on Artificial Intelligence (AAAI). 2025.
+        <a href="#">[Paper]</a>
+        <a href="#">[Artifact]</a>
+    </li>
+
+    <li>
+        <span class="pub-badges"><span class="venue">arXiv</span></span>
+        <b>Zhang San</b>, Frank Chen.
+        <i><span class="zh">高效视觉 Transformer 的结构设计</span><span class="en">Sample Paper III: On Efficient Architecture Design for Vision Transformers</span></i>[J].
+        arXiv preprint arXiv:2500.00000, 2025.
+        <a href="#">[Paper]</a>
+        <a href="#">[Data]</a>
+    </li>
+</ul>
+
+<div data-site-footer></div>
+
+<script src="site-config.js?v=20260919-1"></script>
+<script src="site.js?v=20260919-1"></script>
+
+</div>
+</body>
+</html>

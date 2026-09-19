@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     动态页：按时间倒序发布最新消息（论文录用、获奖、开源发布等）
+     每条动态由 <h3> 日期 + <ul> 内容组成，可用徽章标记类型
+     ============================================================ -->
+<html lang="zh-CN" data-title-zh="动态 | 张三" data-title-en="News | Zhang San">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态 | 张三</title>
+    <meta name="description" content="张三的最新学术动态。Latest news of Zhang San.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="style.css?v=20260919-1">
+    <!-- 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/academicons/academicons@1.9.1/css/academicons.min.css">
+</head>
+
+<body data-page="news">
+<div id="main-content">
+<div data-site-sidebar></div>
+
+<div data-site-header></div>
+
+<h2><span class="zh">近期动态</span><span class="en">News</span></h2>
+
+<!-- ✏️ 修改这里：按时间倒序，复制 <h3> + <ul> 即可增加一组动态
+     徽章可选类型：New publication（新论文）/ Award（获奖）/ Release（开源）等 -->
+<h3><span class="zh">2026.9</span><span class="en">Sep 2026</span></h3>
+<ul class="content-list">
+<li>
+    <span class="pub-badges"><span class="venue"><span class="zh">新论文</span><span class="en">New publication</span></span></span>
+    <span class="zh">论文 <i>Sample Paper I: A Multi-Modal Framework for Lightweight Visual Recognition on Edge Devices</i> 被 CVPR 2026 接收为 Oral（前 3%）。该工作提出了面向边缘设备的多模态轻量化识别框架，在保持精度的同时将推理开销降低约 40%。</span>
+    <span class="en">Our paper, <a href="#"><i>Sample Paper I: A Multi-Modal Framework for Lightweight Visual Recognition on Edge Devices</i></a>, has been accepted by CVPR 2026 as Oral (Top 3%). The paper proposes an efficient multimodal recognition framework for edge devices, reducing inference cost by about 40% while keeping accuracy.</span>
+</li>
+</ul>
+
+<h3><span class="zh">2025.6</span><span class="en">Jun 2025</span></h3>
+<ul class="content-list">
+<li>
+    <span class="pub-badges"><span class="venue"><span class="zh">获奖</span><span class="en">Award</span></span></span>
+    <span class="zh">获评 CVPR 2025 优秀审稿人。</span>
+    <span class="en">Named Outstanding Reviewer of CVPR 2025.</span>
+</li>
+</ul>
+
+<h3><span class="zh">2025.3</span><span class="en">Mar 2025</span></h3>
+<ul class="content-list">
+<li>
+    <span class="pub-badges"><span class="venue"><span class="zh">开源</span><span class="en">Release</span></span></span>
+    <span class="zh">Sample Paper I 的代码与模型已在 <a href="#">GitHub</a> 开源。</span>
+    <span class="en">Code and models of Sample Paper I are now available on <a href="#">GitHub</a>.</span>
+</li>
+</ul>
+
+<div data-site-footer></div>
+
+<script src="site-config.js?v=20260919-1"></script>
+<script src="site.js?v=20260919-1"></script>
+
+</div>
+</body>
+</html>
