@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     个人学术主页模板（GitHub Pages 静态站点，无需构建）
+     双语说明：页面中所有文字都写成一对 span：
+       <span class="zh">中文</span><span class="en">English</span>
+     右上角按钮切换语言，规则见 assets/js/main.js。
+     ✏️ 标记的地方通常都是需要替换成你个人信息的位置。
+     ============================================================ -->
+<html lang="zh-CN" data-title-zh="张三 | 个人学术主页" data-title-en="Zhang San | Academic Homepage">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张三 | 个人学术主页</title>
+  <meta name="description" content="张三的个人学术主页：教育背景、发表论文、获奖情况、学术服务与联系方式。Zhang San's academic homepage: education, publications, awards, academic service and contact.">
+  <meta name="author" content="Zhang San">
+  <meta name="theme-color" content="#3b5bdb">
+
+  <!-- ✏️ 部署为 username.github.io 后，取消注释并替换用户名（利于 SEO / 分享卡片）
+  <link rel="canonical" href="https://morningliumengkun.github.io/">
+  <meta property="og:title" content="Zhang San | Academic Homepage">
+  <meta property="og:description" content="Ph.D. candidate in Computer Science. Machine Learning / Computer Vision / Multimodal Learning.">
+  <meta property="og:type" content="website">
+  -->
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="site-header">
+  <nav class="nav container" aria-label="主导航 / Main navigation">
+    <!-- ✏️ 修改这里：你的姓名 -->
+    <a class="nav-brand" href="#top"><span class="zh">张三</span><span class="en">Zhang San</span></a>
+    <div class="nav-links">
+      <a href="#about"><span class="zh">关于</span><span class="en">About</span></a>
+      <a href="#education"><span class="zh">教育</span><span class="en">Education</span></a>
+      <a href="#publications"><span class="zh">论文</span><span class="en">Papers</span></a>
+      <a href="#awards"><span class="zh">获奖</span><span class="en">Awards</span></a>
+      <a href="#service"><span class="zh">服务</span><span class="en">Service</span></a>
+      <a href="#contact"><span class="zh">联系</span><span class="en">Contact</span></a>
+      <button id="lang-toggle" class="lang-btn" type="button" aria-label="切换语言 / Switch language">EN</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= 首屏个人信息 ================= -->
+  <section class="hero container">
+    <!-- ✏️ 替换头像：把你的照片放到 assets/img/ 并修改 src（推荐方形照片，会自动裁成圆形） -->
+    <img class="avatar" src="assets/img/avatar.svg" alt="个人照片占位 / Photo placeholder" width="150" height="150">
+    <h1 class="hero-name"><span class="zh">张三</span><span class="en">Zhang San</span></h1>
+    <!-- ✏️ 修改这里：当前身份，例如 “XX大学 博士研究生” -->
+    <p class="hero-title"><span class="zh">博士研究生 · 计算机科学与技术 · 示例大学</span><span class="en">Ph.D. Candidate in Computer Science · Example University</span></p>
+    <!-- ✏️ 修改这里：一句话研究方向 -->
+    <p class="hero-bio"><span class="zh">研究方向：机器学习 / 计算机视觉 / 多模态学习</span><span class="en">Research Interests: Machine Learning / Computer Vision / Multimodal Learning</span></p>
+    <div class="hero-links">
+      <!-- ✏️ 替换为你的真实链接 -->
+      <a href="mailto:your-email@example.com">Email</a>
+      <a href="https://github.com/Morningliumengkun" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/YOUR_ORCID" target="_blank" rel="noopener">ORCID</a>
+      <a href="assets/files/cv.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+  </section>
+
+  <!-- ================= 关于我 ================= -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2><span class="zh">关于我</span><span class="en">About Me</span></h2>
+      <div class="section-body">
+        <!-- ✏️ 修改这里：个人简介（两段，可增删） -->
+        <p>
+          <span class="zh">我是张三，示例大学计算机科学与技术学院 2023 级博士研究生，导师为李四教授。此前于 2023 年在示例理工大学获得计算机技术硕士学位，于 2020 年在示例大学获得计算机科学与技术学士学位。我的研究兴趣包括机器学习、计算机视觉与多模态学习，目前致力于面向边缘设备的高效多模态感知研究。</span>
+          <span class="en">I am a Ph.D. student (2023&ndash;present) at the School of Computer Science, Example University, advised by Prof. Si Li. I received my M.S. in Computer Technology from Example Tech University in 2023 and my B.S. in Computer Science from Example University in 2020. My research interests lie in machine learning, computer vision, and multimodal learning, currently focusing on efficient multimodal perception for edge devices.</span>
+        </p>
+        <p>
+          <span class="zh">攻读博士学位期间，我以第一作者身份在 CVPR、AAAI 等国际会议发表论文多篇，曾获研究生国家奖学金、校一等奖学金等奖励。我热爱开源社区，欢迎通过邮件与我交流合作。</span>
+          <span class="en">During my Ph.D. study, I have published several first-author papers at international venues such as CVPR and AAAI, and received honors including the National Graduate Scholarship. I am an open-source enthusiast and always happy to collaborate &mdash; feel free to reach out by email.</span>
+        </p>
+
+        <!-- ✏️ 修改这里：近期动态（时间倒序，可增删） -->
+        <h3><span class="zh">📰 近期动态</span><span class="en">📰 News</span></h3>
+        <ul class="news">
+          <li><span class="zh"><strong>2026.09</strong> 一篇论文被 CVPR 2026 接收为 Oral。</span><span class="en"><strong>Sep 2026</strong> One paper accepted to CVPR 2026 as Oral.</span></li>
+          <li><span class="zh"><strong>2025.06</strong> 获评 CVPR 2025 优秀审稿人。</span><span class="en"><strong>Jun 2025</strong> Named Outstanding Reviewer of CVPR 2025.</span></li>
+          <li><span class="zh"><strong>2025.03</strong> 论文 Sample Paper I 的代码与模型已开源。</span><span class="en"><strong>Mar 2025</strong> Code and models of Sample Paper I released.</span></li>
+        </ul>
+
+        <!-- ✏️ 修改这里：研究关键词 -->
+        <ul class="chips">
+          <li><span class="zh">机器学习</span><span class="en">Machine Learning</span></li>
+          <li><span class="zh">计算机视觉</span><span class="en">Computer Vision</span></li>
+          <li><span class="zh">多模态学习</span><span class="en">Multimodal Learning</span></li>
+          <li><span class="zh">模型轻量化</span><span class="en">Efficient Models</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 教育背景 ================= -->
+  <section id="education" class="section reveal">
+    <div class="container">
+      <h2><span class="zh">教育背景</span><span class="en">Education</span></h2>
+      <!-- ✏️ 修改这里：按时间倒序，复制 <li> 即可增加一条学历 -->
+      <ol class="timeline">
+        <li>
+          <div class="edu-head">
+            <div class="edu-degree"><span class="zh">工学博士（在读） · 计算机科学与技术</span><span class="en">Ph.D. in Computer Science (in progress)</span></div>
+            <div class="edu-period"><span class="zh">2023.09 – 至今</span><span class="en">Sep 2023 &ndash; Present</span></div>
+          </div>
+          <div class="edu-school"><span class="zh">示例大学 · 计算机科学与技术学院</span><span class="en">Example University · School of Computer Science</span></div>
+          <div class="edu-detail"><span class="zh">导师：李四教授 ｜ 研究方向：多模态学习</span><span class="en">Advisor: Prof. Si Li ｜ Focus: Multimodal Learning</span></div>
+        </li>
+        <li>
+          <div class="edu-head">
+            <div class="edu-degree"><span class="zh">工学硕士 · 计算机技术</span><span class="en">M.S. in Computer Technology</span></div>
+            <div class="edu-period"><span class="zh">2020.09 – 2023.06</span><span class="en">Sep 2020 &ndash; Jun 2023</span></div>
+          </div>
+          <div class="edu-school"><span class="zh">示例理工大学 · 计算机学院</span><span class="en">Example Tech University · School of Computer Science</span></div>
+          <div class="edu-detail"><span class="zh">GPA 3.9 / 4.0 ｜ 获校一等奖学金</span><span class="en">GPA 3.9 / 4.0 ｜ First-Class Scholarship</span></div>
+        </li>
+        <li>
+          <div class="edu-head">
+            <div class="edu-degree"><span class="zh">工学学士 · 计算机科学与技术</span><span class="en">B.S. in Computer Science</span></div>
+            <div class="edu-period"><span class="zh">2016.09 – 2020.06</span><span class="en">Sep 2016 &ndash; Jun 2020</span></div>
+          </div>
+          <div class="edu-school"><span class="zh">示例大学 · 计算机科学与技术学院</span><span class="en">Example University · School of Computer Science</span></div>
+          <div class="edu-detail"><span class="zh">GPA 3.8 / 4.0（专业前 5%）</span><span class="en">GPA 3.8 / 4.0 (Top 5%)</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= 论文发表 ================= -->
+  <section id="publications" class="section reveal">
+    <div class="container">
+      <h2><span class="zh">论文发表</span><span class="en">Publications</span></h2>
+      <p class="pub-note-line"><span class="zh">（* 同等贡献；加粗为本人。链接请替换为论文 PDF / arXiv / 代码仓库的真实地址。）</span><span class="en">(* equal contribution; bold = my name. Replace # links with real PDF / arXiv / code URLs.)</span></p>
+
+      <!-- ✏️ 论文模板：复制整个 <article class="pub"> 并修改内容，按时间倒序排列 -->
+
+      <article class="pub">
+        <div class="pub-title"><span class="zh">Sample Paper I：面向边缘设备的多模态轻量化识别框架</span><span class="en">Sample Paper I: A Multi-Modal Framework for Lightweight Visual Recognition on Edge Devices</span></div>
+        <div class="pub-authors">Alice Chen*, <strong>Zhang San</strong>*, Bob Li, Carol Wang</div>
+        <div class="pub-venue">
+          <span class="badge">CVPR 2026</span>
+          <span class="pub-note"><span class="zh">Oral Presentation（前 3%）</span><span class="en">Oral Presentation (Top 3%)</span></span>
+        </div>
+        <div class="pub-links">
+          <a href="#" title="请替换为论文链接">PDF</a>
+          <a href="#" title="请替换为 arXiv 链接">arXiv</a>
+          <a href="#" title="请替换为代码仓库链接">Code</a>
+        </div>
+        <details>
+          <summary>BibTeX</summary>
+<pre>@inproceedings{zhang2026sample,
+  title     = {Sample Paper I: A Multi-Modal Framework for Lightweight
+               Visual Recognition on Edge Devices},
+  author    = {Chen, Alice and Zhang, San and Li, Bob and Wang, Carol},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer
+               Vision and Pattern Recognition (CVPR)},
+  year      = {2026}
+}</pre>
+        </details>
+      </article>
+
+      <article class="pub">
+        <div class="pub-title"><span class="zh">Sample Paper II：基于对比学习的跨模态检索方法</span><span class="en">Sample Paper II: Cross-Modal Retrieval via Contrastive Learning</span></div>
+        <div class="pub-authors"><strong>Zhang San</strong>, David Zhou, Emma Wu</div>
+        <div class="pub-venue">
+          <span class="badge">AAAI 2025</span>
+        </div>
+        <div class="pub-links">
+          <a href="#" title="请替换为论文链接">PDF</a>
+          <a href="#" title="请替换为 arXiv 链接">arXiv</a>
+          <a href="#" title="请替换为代码仓库链接">Code</a>
+        </div>
+        <details>
+          <summary>BibTeX</summary>
+<pre>@inproceedings{zhang2025cross,
+  title     = {Sample Paper II: Cross-Modal Retrieval via Contrastive Learning},
+  author    = {Zhang, San and Zhou, David and Wu, Emma},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
+  year      = {2025}
+}</pre>
+        </details>
+      </article>
+
+      <article class="pub">
+        <div class="pub-title"><span class="zh">Sample Paper III：高效视觉 Transformer 的结构设计</span><span class="en">Sample Paper III: On Efficient Architecture Design for Vision Transformers</span></div>
+        <div class="pub-authors"><strong>Zhang San</strong>, Frank Chen</div>
+        <div class="pub-venue">
+          <span class="badge badge-soft"><span class="zh">预印本 / 在投</span><span class="en">Preprint / Under Review</span></span>
+        </div>
+        <div class="pub-links">
+          <a href="#" title="请替换为 arXiv 链接">arXiv</a>
+        </div>
+        <details>
+          <summary>BibTeX</summary>
+<pre>@article{zhang2025efficient,
+  title   = {Sample Paper III: On Efficient Architecture Design for Vision Transformers},
+  author  = {Zhang, San and Chen, Frank},
+  journal = {arXiv preprint arXiv:2500.00000},
+  year    = {2025}
+}</pre>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= 荣誉奖项 ================= -->
+  <section id="awards" class="section reveal">
+    <div class="container">
+      <h2><span class="zh">荣誉奖项</span><span class="en">Honors &amp; Awards</span></h2>
+      <!-- ✏️ 修改这里：按时间倒序，复制 <li> 即可增加一条奖项 -->
+      <ul class="awards">
+        <li>
+          <span class="award-year">2026</span>
+          <span class="award-name"><span class="zh">研究生国家奖学金</span><span class="en">National Graduate Scholarship</span></span>
+          <span class="award-badge"><span class="zh">国家级</span><span class="en">National</span></span>
+        </li>
+        <li>
+          <span class="award-year">2025</span>
+          <span class="award-name"><span class="zh">CVPR 2025 优秀审稿人</span><span class="en">Outstanding Reviewer, CVPR 2025</span></span>
+          <span class="award-badge"><span class="zh">国际</span><span class="en">International</span></span>
+        </li>
+        <li>
+          <span class="award-year">2024</span>
+          <span class="award-name"><span class="zh">校一等奖学金</span><span class="en">First-Class Academic Scholarship</span></span>
+          <span class="award-badge"><span class="zh">校级</span><span class="en">University</span></span>
+        </li>
+        <li>
+          <span class="award-year">2022</span>
+          <span class="award-name"><span class="zh">全国大学生数学建模竞赛一等奖</span><span class="en">First Prize, China Undergraduate Mathematical Contest in Modeling</span></span>
+          <span class="award-badge"><span class="zh">国家级</span><span class="en">National</span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 学术服务 ================= -->
+  <section id="service" class="section reveal">
+    <div class="container">
+      <h2><span class="zh">学术服务</span><span class="en">Academic Service</span></h2>
+      <!-- ✏️ 修改这里：审稿、程序委员会、志愿活动等 -->
+      <ul class="service-list">
+        <li><span class="zh">会议审稿人：CVPR、ICCV、ECCV、NeurIPS、AAAI（2023 – 至今）</span><span class="en">Conference Reviewer: CVPR, ICCV, ECCV, NeurIPS, AAAI (2023 &ndash; present)</span></li>
+        <li><span class="zh">期刊审稿人：IEEE TPAMI、IEEE TIP</span><span class="en">Journal Reviewer: IEEE TPAMI, IEEE TIP</span></li>
+        <li><span class="zh">NeurIPS 2024 学生志愿者</span><span class="en">Student Volunteer, NeurIPS 2024</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 联系方式 ================= -->
+  <section id="contact" class="section contact reveal">
+    <div class="container">
+      <h2><span class="zh">联系方式</span><span class="en">Contact</span></h2>
+      <p><span class="zh">如果你对我的研究感兴趣，或想交流合作，欢迎随时通过邮件联系我！</span><span class="en">If you are interested in my research or would like to collaborate, feel free to reach out!</span></p>
+      <!-- ✏️ 替换为你的邮箱 -->
+      <a class="contact-btn" href="mailto:your-email@example.com">your-email@example.com</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 <span class="zh">张三</span><span class="en">Zhang San</span> · Powered by <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></p>
+    <p><span class="zh">最后更新：2026-09-19</span><span class="en">Last updated: 2026-09-19</span></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
