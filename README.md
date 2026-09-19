@@ -88,15 +88,103 @@ git push
 | GitHub / Google Scholar / ORCID / CV 链接 | `site-config.js` 的 `profile.links`（每个链接用 Font Awesome 图标类） |
 | 导航页面名称与顺序 | `site-config.js` 的 `pages` 数组 |
 | 个人简介 | `index.html` 顶部 `✏️ 修改这里：个人简介` 处 |
-| 教育背景 | `index.html` 的 `教育背景` 区块，复制 `<li>` 增加一条 |
-| 审稿经历 / 学术报告 / 资助 / 获奖 | `index.html` 对应区块 |
+| 教育背景 | `index.html` 的 `教育背景` 区块，复制 `<li>` 增加一条（见下方模板 1） |
+| 审稿经历 / 学术报告 / 资助 / 获奖 | `index.html` 对应区块（见下方模板 2、4、5、6） |
 | 联系邮箱 | `index.html` 的 `联系方式` 区块（两处） |
-| 近期动态 | `news.html`，复制 `<h3> + <ul>` 增加一组 |
+| 近期动态 | `news.html`，复制 `<h3> + <ul>` 增加一组（见下方模板 3） |
 | 论文列表 | `publications.html`，复制 `<li>` 增加一篇（见下方模板） |
 | 页脚"最后更新" | 自动读取 `site-config.js` 中 `github` 仓库的提交时间，无需手动维护 |
 | 标签页图标 | 修改 `assets/img/favicon.svg` 中的首字母 |
 | 主题色 | `style.css`：链接 `#2a5db0`、venue 徽章 `#33a6b8`、等级徽章 `#a83232`、标签徽章 `#7e4db3` |
 | 字体 | `style.css` 顶部 `body` 与 `html[lang="zh-CN"] body` 的 font-family |
+
+### 各类信息添加模板 / Entry Templates
+
+通用规则：**复制对应模板 → 粘贴到指定区块 → 修改文字**。双语条目必须同时填写 `class="zh"`（中文）和 `class="en"`（英文）两份内容，页面上同一时间只显示其中一种（由右上角语言按钮决定）。
+
+#### 1. 添加一条教育背景（`index.html` 的“教育背景”区块）
+
+```html
+<li><b><span class="zh">工学博士（在读）</span><span class="en">Ph.D. (in progress)</span></b> (2023.9-Now)
+    <br>
+    <span class="zh">示例大学 计算机科学与技术学院，北京，中国。导师：李四教授。</span>
+    <span class="en">School of Computer Science, Example University, Beijing, China. Advisor: Prof. Si Li.</span>
+</li>
+```
+
+说明：加粗部分是学位名称，紧跟的括号是起止年月（格式 `2023.9-Now` / `2020.9-2023.6`）；`<br>` 之后是学校、专业、导师等详情。按时间倒序排列。
+
+#### 2. 添加一条获奖（`index.html` 的“获奖情况（部分）”区块）
+
+```html
+<li>
+    <span class="zh">研究生国家奖学金（2026.9）</span>
+    <span class="en">National Graduate Scholarship (<span lang="zh">研究生国家奖学金</span>, 2026.9)</span>
+</li>
+```
+
+说明：英文行里的 `<span lang="zh">…</span>` 用于保留奖项的官方中文名（参考站同款写法），不需要可整段删掉；中文行里用中文括号即可。
+
+#### 3. 添加一组近期动态（`news.html`）
+
+```html
+<h3><span class="zh">2026.9</span><span class="en">Sep 2026</span></h3>
+<ul class="content-list">
+<li>
+    <span class="pub-badges"><span class="venue"><span class="zh">新论文</span><span class="en">New publication</span></span></span>
+    <span class="zh">中文描述，可包含 <a href="#">链接</a>。</span>
+    <span class="en">English description with an <a href="#">optional link</a>.</span>
+</li>
+</ul>
+```
+
+说明：
+
+- 徽章文字随意（如 新论文/Award/开源 Release），中英文分别写在 `zh`/`en` span 里；换徽章颜色：`.venue`（青色）→ `.rank`（红色）→ `.tag`（紫色）；
+- 同一个月有多条动态：在同一个 `<ul>` 里加多个 `<li>`；不同月份：复制一整段 `<h3> + <ul>`，**新动态放在页面越靠上越新**（倒序）。
+
+#### 4. 添加审稿经历（`index.html` 的“受邀审稿”区块）
+
+```html
+<li><b>2026</b>:
+    CVPR, ICCV, NeurIPS
+</li>
+```
+
+说明：会议/期刊名是国际通用缩写，无需翻译，两侧语言显示相同。
+
+#### 5. 添加学术报告（`index.html` 的“报告”区块）
+
+```html
+<li>
+    <b>Zhang San</b>. <i><span class="zh">中文题目</span><span class="en">English Title</span></i>.
+    <span class="zh">第一届示例研讨会，2025 年 6 月，中国杭州。</span>
+    <span class="en">1st Example Workshop, June 2025, Hangzhou, China.</span>
+    <a href="幻灯片链接">[Slides]</a>
+</li>
+```
+
+说明：需要强调时可套用 `<span class="mybold">…</span>`（紫色加粗，参考站的 Lightning talk 写法）；没有幻灯片就删掉 `[Slides]` 链接。
+
+#### 6. 添加资助经历（`index.html` 的“资助”区块）
+
+```html
+<li>
+    <span class="zh">资助项目名称，来源（2025.10-2026.9）</span>
+    <span class="en">Funding program name, Country (2025.10-2026.9)</span>
+</li>
+```
+
+#### 7. 添加个人链接（`site-config.js` 的 `profile.links` 数组）
+
+```js
+{ label: "Email", href: "mailto:you@example.com", iconClass: "fas fa-envelope" },
+```
+
+说明：链接会自动出现在首页顶部姓名下方，用 ` | ` 分隔。图标类来自页面已引入的两个图标库：
+
+- Font Awesome：`fab fa-github`、`fab fa-google`、`fas fa-envelope`、`fas fa-file-pdf`、`fas fa-graduation-cap` 等（完整列表见 [fontawesome.com/icons](https://fontawesome.com/icons)）；
+- Academicons：`ai ai-google-scholar`、`ai ai-orcid`、`ai ai-cv`、`ai ai-arxiv` 等（学术站点专用图标）。
 
 ### 添加一篇论文的模板
 
